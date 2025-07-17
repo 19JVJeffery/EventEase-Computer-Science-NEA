@@ -1,1 +1,0 @@
-# EventEase-Computer-Science-NEA
