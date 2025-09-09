@@ -1,0 +1,285 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #8BDEFF; /* Margin/frame color */
+    color: white;
+}
+
+.menuWrapper {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+    box-shadow: 0px 0px 25px 0px #000000; /* Combined box-shadow */
+}
+
+.menu {
+    background-color: #56CBF9;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-shadow: 0px 0px 15px 7px #000000;
+}
+
+.menuImage img {
+    height: 90px;
+    object-fit: contain;
+    margin: 2px;
+}
+
+.menuImage:hover {
+    background-color: #8BDEFF;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0 16px;
+    height: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+li a:hover {
+    background-color: #8BDEFF;
+}
+
+li a:active {
+    background-color: #44A3C9;
+}
+
+.bodyBackground {
+    position: fixed;
+    top: 124px;
+    left: 24px;
+    right: 24px;
+    bottom: 104px; /* previously 24px, now allows space for footer */
+    background-color: #409DC2;
+    box-shadow: inset 0px 0px 10px 0px #000000;
+    padding: 20px;
+    border-radius: 12px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #8BDEFF;
+    width: calc(33% - 20px);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cardTitle {
+    background-color: #56CBF9;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.cardImageWrapper {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #8BDEFF;
+    overflow: hidden;
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+.cardContent {
+    background-color: #51BFEA;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+.cardPrice {
+    background-color: #51BFEA;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+.indexCard {
+    width: 100%; /* spans the full width */
+    height: 100px; /* makes it taller */
+    background-color: #8BDEFF; /* background color */
+    border-radius: 15px; /* rounded outer corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .indexCard .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff; /* inner box with white background */
+    border-top-left-radius: 15px; /* rounded top-left corner */
+    border-top-right-radius: 15px; /* rounded top-right corner */
+    border-bottom-left-radius: 15px; /* sharp bottom-left corner */
+    border-bottom-right-radius: 15px; /* sharp bottom-right corner */
+    padding: 15px;
+    width: 100%; /* spans the full width */
+  }
+  
+  .indexCard h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .indexCard p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+/* Smooth button animation */
+button, .animated-button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+button:hover, .animated-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background-color: #3B92B0;
+}
+
+button:active, .animated-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Test formatting */
+.glass-button {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 10px 15px;
+  border-radius: 15px;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  margin: 20px;
+}
+
+.glass-button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* Disable card hover animation on the product page */
+body.productPage .card:hover {
+    transform: none;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Original card shadow */
+}
+
+/* Footer styles */
+.footerWrapper {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    box-shadow: 0px 0px 25px 0px #000000;
+}
+
+.footer {
+    background-color: #51BFEA;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 15px 7px #000000;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.error{
+    margin: 10px;
+    border:2px solid #ff0000;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 10%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+input[type="text"] {
+    margin: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    border: 0px;
+    height: 25px;
+    font-size: 16px;
+}
+
+input[type="password"] {
+    margin: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    border: 0px;
+    height: 25px;
+    font-size: 16px;
+}
