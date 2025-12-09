@@ -6,5 +6,6 @@
     <title>EventEase - Easily book your live events</title>
   </head>
   <body>
+      <?php include("header.php") ?>
   </body>
 </html>
