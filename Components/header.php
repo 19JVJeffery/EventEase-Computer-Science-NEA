@@ -1,9 +1,9 @@
 <div class="menuWrapper">
     <div class="menu">
       <div class="menuImage">
-        <a href="index.php">
-            <!--Insert logo-->
-            <!--<img src="/Images/Logo.png" alt="Logo">-->
+        <a class="menuTitle" href="index.php">
+          <!--Insert logo-->
+          EventEase
         </a>
       </div>
       <ul>

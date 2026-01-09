@@ -1,9 +1,16 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #8BDEFF; /* Margin/frame color */
+    /*font-family: Arial, sans-serif;*/
+    font-family: 'Inter';
+    background-color: #FAF8F5; /* Margin/frame color */
     color: white;
+
+    > .homePage{
+        background-image: url('pexels-picjumbo-com-55570-196652.jpg') !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
 }
 
 .menuWrapper {
@@ -18,7 +25,7 @@ body {
 }
 
 .menu {
-    background-color: #56CBF9;
+    background-color: #6A0DAD;
     height: 100px;
     width: 100%;
     display: flex;
@@ -28,10 +35,19 @@ body {
     box-shadow: 0px 0px 15px 7px #000000;
 }
 
+.menuTitle {
+    font-size: 28px;
+    color: white;
+    margin-left: 0px;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+
 .menuImage img {
     height: 90px;
     object-fit: contain;
-    margin: 2px;
+    margin-left: 20px;
 }
 
 .menuImage:hover {
@@ -59,7 +75,7 @@ li a {
 }
 
 li a:hover {
-    background-color: #8BDEFF;
+    background-color: #D6C2E9;
 }
 
 li a:active {
@@ -72,8 +88,7 @@ li a:active {
     left: 24px;
     right: 24px;
     bottom: 104px; /* previously 24px, now allows space for footer */
-    background-color: #409DC2;
-    box-shadow: inset 0px 0px 10px 0px #000000;
+    background-color: #FAF8F5;
     padding: 20px;
     border-radius: 12px;
     overflow-y: auto;
@@ -97,6 +112,25 @@ li a:active {
     display: block;
     text-decoration: none;
     color: inherit;
+}
+
+.homeCard {
+    background-color: #FF6B35;
+    width: calc(33% - 20px);
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+}
+
+.homeCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .card:hover {
@@ -183,50 +217,6 @@ li a:active {
     color: #666;
     line-height: 1.5;
   }
-  
-/* Smooth button animation */
-button, .animated-button {
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-    cursor: pointer;
-}
-
-button:hover, .animated-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    background-color: #3B92B0;
-}
-
-button:active, .animated-button:active {
-    transform: scale(0.98);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Test formatting */
-.glass-button {
-  background: rgba(255, 255, 255, 0.3);
-  padding: 10px 15px;
-  border-radius: 15px;
-  transition: all 0.2s ease-in-out;
-  display: inline-block;
-  width: 80px;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-  color: white;
-  font-size: 16px;
-  margin: 20px;
-}
-
-.glass-button:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-
-/* Disable card hover animation on the product page */
-body.productPage .card:hover {
-    transform: none;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Original card shadow */
-}
 
 /* Footer styles */
 .footerWrapper {
@@ -241,7 +231,7 @@ body.productPage .card:hover {
 }
 
 .footer {
-    background-color: #51BFEA;
+    background-color: #6A0DAD;
     height: 80px;
     width: 100%;
     display: flex;
@@ -252,34 +242,4 @@ body.productPage .card:hover {
     font-size: 16px;
     text-align: center;
     padding: 0 20px;
-}
-
-.error{
-    margin: 10px;
-    border:2px solid #ff0000;
-    border-radius: 15px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 10%;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-input[type="text"] {
-    margin: 15px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    color: white;
-    border: 0px;
-    height: 25px;
-    font-size: 16px;
-}
-
-input[type="password"] {
-    margin: 15px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    color: white;
-    border: 0px;
-    height: 25px;
-    font-size: 16px;
 }
