@@ -5,12 +5,6 @@ body {
     font-family: 'Inter';
     background-color: #FAF8F5; /* Margin/frame color */
     color: white;
-
-    > .homePage{
-        background-image: url('pexels-picjumbo-com-55570-196652.jpg') !important;
-        background-size: cover !important;
-        background-position: center !important;
-    }
 }
 
 .menuWrapper {
@@ -72,6 +66,7 @@ li a {
     line-height: 60px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    border-radius: 12px;
 }
 
 li a:hover {
@@ -79,7 +74,8 @@ li a:hover {
 }
 
 li a:active {
-    background-color: #44A3C9;
+    background-color: #C4A9E0;
+    
 }
 
 .bodyBackground {
@@ -88,7 +84,7 @@ li a:active {
     left: 24px;
     right: 24px;
     bottom: 104px; /* previously 24px, now allows space for footer */
-    background-color: #FAF8F5;
+    background-color: #faf8f500;
     padding: 20px;
     border-radius: 12px;
     overflow-y: auto;
@@ -242,4 +238,129 @@ li a:active {
     font-size: 16px;
     text-align: center;
     padding: 0 20px;
+}
+
+/*Button styles*/
+
+/* Base animated button using purple/orange instead of blue */
+.animated-button,
+button {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #6A0DAD, #FF6B35);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+
+/* Glowing gradient effect on hover */
+.animated-button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(60deg, #FF6B35, #6A0DAD, #FF9B6B, #FF6B35);
+    background-size: 400% 400%;
+    filter: blur(20px);
+    opacity: 0;
+    z-index: 0;
+    border-radius: inherit;
+    transition: opacity 0.3s ease;
+    animation: glowGradient 6s ease infinite;
+}
+
+/* Keep button text above glow */
+.animated-button span,
+button span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hover effect */
+.animated-button:hover,
+button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 10px #FF6B35;
+}
+
+.animated-button:hover::before {
+    opacity: 0.6;
+}
+
+/* Active / pressed state */
+.animated-button:active,
+button:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Glass-style button variant */
+.glass-button {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px 28px;
+    border-radius: 15px;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    margin: 10px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Glow animation keyframes */
+@keyframes glowGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Standard button (flat, clean, consistent with site colors) */
+.standard-button {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    background-color: #6A0DAD; /* Primary purple */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    margin: 10px;
+}
+
+/* Hover effect */
+.standard-button:hover {
+    background-color: #FF6B35; /* Switch to orange on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Active / pressed state */
+.standard-button:active {
+    transform: scale(0.97);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
