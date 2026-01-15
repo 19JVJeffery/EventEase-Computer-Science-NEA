@@ -13,7 +13,7 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
-    border-radius: 0 0 12px 12px;
+    border-radius: 0 0 0px 0px;
     overflow: hidden;
     box-shadow: 0px 0px 25px 0px #000000; /* Combined box-shadow */
 }
@@ -223,7 +223,7 @@ li a:active {
     bottom: 0;
     left: 0;
     z-index: 1000;
-    border-radius: 12px 12px 0 0;
+    border-radius: 0px 0px 0 0;
     overflow: hidden;
     box-shadow: 0px 0px 25px 0px #000000;
 }
