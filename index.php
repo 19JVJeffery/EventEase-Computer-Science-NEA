@@ -32,7 +32,7 @@
   </div>
 </div>
   <!--Footer-->
-  <div class="footerWrapper">
+  <div class="footerWrapper" >
     <?php include("Components/footer.php") ?>
   </div>
 </body>
