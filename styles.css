@@ -45,7 +45,8 @@ body {
 }
 
 .menuImage:hover {
-    background-color: #8BDEFF;
+    background-color: #D6C2E9;
+    border-radius: 5px;
 }
 
 ul {
@@ -99,8 +100,9 @@ li a:active {
 }
 
 .card {
-    background-color: #ffffff;
-    width: calc(33% - 20px);
+    background-color: #6a0dad6e;
+    width: calc(50%);
+    height: auto;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
@@ -108,6 +110,28 @@ li a:active {
     display: block;
     text-decoration: none;
     color: inherit;
+    margin: 40px auto;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 20px;
+
+}
+
+.eventsCard {
+    background-color: #6a0dad6e;
+    width: 25%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    margin: 40px auto;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 20px;
+
 }
 
 .homeCard {

@@ -1,7 +1,7 @@
-<div class="card">
+<div class="eventsCard">
 
     <a href="Product Pages/<?= $id ?>.php" class="cardLink">
-        <div class="cardTitle"><?= $name ?></div>
+        <div class="cardTitle" style="border-radius: 15px 15px 0px 0px;"><?= $name ?></div>
 
         <div class="cardImageWrapper">
             <img
@@ -20,7 +20,7 @@
         Stock: <?= $stock ?>
     </div>
 
-    <div class="cardPrice">
+    <div class="cardPrice" style="border-radius: 0px 0px 15px 15px;">
         &pound;<?= number_format($price, 2) ?>
     </div>
 

@@ -1,14 +1,3 @@
-<!--Start of my HTML
-<!DOCTYPE html>
-<html lang="en">
-  
-  
-  <body>
-      <?php include("header.php") ?>
-  </body>
-</html>
--->
-
 <!--Start of my HTML-->
 <!DOCTYPE html>
 <html lang="en">
@@ -20,16 +9,21 @@
   <?php include("Components/header.php") ?>
   <div class="bodyBackground">
     <div class="cardsContainer">
-      <!-- Iterative PHP-->
       <div class="homeCard">
         <h2>Welcome to EventEase!</h2>
       </div>
     </div>
-    <br>
-    <div style="margin: 0 auto;">
-          <div class="animated-button" style="margin: 0 auto;">View Events
+    <div class="cardsContainer">
+      <div class="card">
+        <p>EventEase is a simple and reliable event ticket booking platform designed to make finding and booking events quick and stress-free. Our website allows users to browse upcoming events, view key details, and secure tickets easily, while giving organisers a clear and efficient way to promote events and manage bookings.</p>
+      </div>
     </div>
-  </div>
+    <br>
+    <a href="events.php">
+      <div align = "center">
+          <div class="animated-button" href="events.php">View Events</div>
+      </div>
+    </a>
 </div>
   <!--Footer-->
   <div class="footerWrapper" >
