@@ -18,7 +18,6 @@
         <p>EventEase is a simple and reliable event ticket booking platform designed to make finding and booking events quick and stress-free.</p>
       </div>
     </div>
-    <br>
     <a href="events.php">
       <div align = "center">
           <div class="animated-button" href="events.php">View Events</div>
