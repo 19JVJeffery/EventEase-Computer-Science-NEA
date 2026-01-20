@@ -10,12 +10,12 @@
   <div class="bodyBackground">
     <div class="cardsContainer">
       <div class="homeCard">
-        <h2>Welcome to EventEase!</h2>
+        <h2 style="margin-top: 0;">Welcome to EventEase!</h2>
       </div>
     </div>
     <div class="cardsContainer">
       <div class="card">
-        <p>EventEase is a simple and reliable event ticket booking platform designed to make finding and booking events quick and stress-free. Our website allows users to browse upcoming events, view key details, and secure tickets easily, while giving organisers a clear and efficient way to promote events and manage bookings.</p>
+        <p>EventEase is a simple and reliable event ticket booking platform designed to make finding and booking events quick and stress-free.</p>
       </div>
     </div>
     <br>
