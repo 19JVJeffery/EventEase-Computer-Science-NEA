@@ -79,6 +79,7 @@ li a:active {
     
 }
 
+/* Default body background */
 .bodyBackground {
     position: fixed;
     top: 124px;
@@ -90,6 +91,23 @@ li a:active {
     border-radius: 12px;
     overflow-y: auto;
     box-sizing: border-box;
+    box-shadow: 0px 0px 25px 0px inset #00000073;
+    
+}
+
+/* Home page body background */
+.homeBodyBackground {
+    position: fixed;
+    top: 124px;
+    left: 24px;
+    right: 24px;
+    bottom: 104px; /* previously 24px, now allows space for footer */
+    background-color: #ffffff41;
+    padding: 20px;
+    border-radius: 12px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
 }
 
 .cardsContainer {
@@ -432,4 +450,20 @@ input[type=text], input[type=email], textarea {
 textarea {
     width: 50%;
     height: 75%;
+}
+
+select {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 12px;
+    border-radius: 15px;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    margin: 10px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }

@@ -7,10 +7,10 @@
   </head>
 <body style="background-image: url('pexels-picjumbo-com-55570-196652.jpg'); background-size: cover;">
   <?php include("Components/header.php") ?>
-  <div class="bodyBackground">
+  <div class="homeBodyBackground">
     <div class="cardsContainer">
       <div class="homeCard">
-        <h2 style="margin-top: 0;">Welcome to EventEase!</h2>
+        <h2>Welcome to EventEase!</h2>
       </div>
     </div>
     <div class="cardsContainer">

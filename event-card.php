@@ -33,7 +33,6 @@
                 <option value="<?= $i ?>"><?= $i ?></option>
             <?php endfor; ?>
         </select>
-
         <button class="standard-button" style="display:block; margin:10px auto;">
             Add to cart
         </button>
