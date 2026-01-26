@@ -1,440 +1,506 @@
+/* ========================================
+   Global Body Styles
+   Applies to all elements on the page
+   ======================================== */
 body {
     margin: 0;
     padding: 0;
-    /*font-family: Arial, sans-serif;*/
-    font-family: 'Inter';
-    background-color: #FAF8F5; /* Margin/frame color */
-    color: white;
+    /* font-family: Arial, sans-serif; */ /* Alternative font (commented out) */
+    font-family: 'Inter'; /* Primary font: Inter */
+    background-color: #FAF8F5; /* Margin/frame color - light beige */
+    color: white; /* Default text color */
 }
 
+/* ========================================
+   Menu/Header Wrapper
+   Fixed header container at top of page
+   ======================================== */
 .menuWrapper {
-    width: 100%;
-    position: fixed;
+    width: 100%; /* Full screen width */
+    position: fixed; /* Fixed position at top */
     top: 0;
     left: 0;
-    z-index: 1000;
-    border-radius: 0 0 0px 0px;
-    overflow: hidden;
-    box-shadow: 0px 0px 25px 0px #000000; /* Combined box-shadow */
+    z-index: 1000; /* Always on top of other elements */
+    border-radius: 0 0 0px 0px; /* No rounded corners */
+    overflow: hidden; /* Hide overflow content */
+    box-shadow: 0px 0px 25px 0px #000000; /* Dark shadow for depth */
 }
 
+/* Menu bar styling */
 .menu {
-    background-color: #6A0DAD;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-    box-shadow: 0px 0px 15px 7px #000000;
+    background-color: #6A0DAD; /* Primary purple color */
+    height: 100px; /* Menu height */
+    width: 100%; /* Full width */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Logo left, nav right */
+    align-items: center; /* Vertically centered */
+    padding: 0 10px; /* Horizontal padding */
+    box-shadow: 0px 0px 15px 7px #000000; /* Deep shadow */
 }
-
+/* Brand/Logo title styling */
 .menuTitle {
-    font-size: 28px;
-    color: white;
-    margin-left: 0px;
-    font-weight: bold;
-    text-decoration: none;
-    
+    font-size: 28px; /* Large font for visibility */
+    color: white; /* White text */
+    margin-left: 0px; /* No left margin */
+    font-weight: bold; /* Bold text */
+    text-decoration: none; /* Remove underline */
 }
 
+/* Logo image styling */
 .menuImage img {
-    height: 90px;
-    object-fit: contain;
-    margin-left: 20px;
+    height: 90px; /* Image height */
+    object-fit: contain; /* Maintain aspect ratio */
+    margin-left: 20px; /* Space from edge */
 }
 
+/* Logo hover effect */
 .menuImage:hover {
-    background-color: #D6C2E9;
+    background-color: #D6C2E9; /* Light purple on hover */
+    border-radius: 5px; /* Slightly rounded corners */D6C2E9;
     border-radius: 5px;
-}
-
+/* Navigation list styling */
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    display: flex; /* Horizontal layout */
+    align-items: center; /* Vertically centered */
+    margin-right: 20px; /* Right margin for spacing */
 }
 
+/* Navigation link styling */
 li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 0 16px;
-    height: 100%;
-    line-height: 60px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    border-radius: 12px;
+    display: block; /* Block display */
+    color: white; /* White text */
+    text-align: center; /* Centered text */
+    padding: 0 16px; /* Horizontal padding */
+    height: 100%; /* Full height of menu */
+    line-height: 60px; /* Vertical centering */
+    text-decoration: none; /* No underline */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+    border-radius: 12px; /* Rounded corners */
 }
 
+/* Navigation link hover effect */
 li a:hover {
-    background-color: #D6C2E9;
+    background-color: #D6C2E9; /* Light purple background */
 }
 
+/* Navigation link active/clicked effect */
 li a:active {
+    background-color: #C4A9E0; /* Slightly darker purple */:active {
     background-color: #C4A9E0;
-    
-}
+   ========================================
+   Content Area Backgrounds
+   Main container for page content
+   ======================================== */
 
-/* Default body background */
+/* Default/standard body background (used on most pages) */
 .bodyBackground {
-    position: fixed;
-    top: 124px;
-    left: 24px;
-    right: 24px;
-    bottom: 104px; /* previously 24px, now allows space for footer */
-    background-color: #faf8f500;
-    padding: 20px;
-    border-radius: 12px;
-    overflow-y: auto;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 25px 0px inset #00000073;
-    
+    position: fixed; /* Fixed positioning */
+    top: 124px; /* Below the header */
+    left: 24px; /* Margin from left */
+    right: 24px; /* Margin from right */
+    bottom: 104px; /* Space for footer (previously 24px) */
+    background-color: #faf8f500; /* Transparent light color */
+    padding: 20px; /* Inner padding */
+    border-radius: 12px; /* Rounded corners */
+    overflow-y: auto; /* Allow vertical scroll */
+    box-sizing: border-box; /* Include padding in width calc */
+    box-shadow: 0px 0px 25px 0px inset #00000073; /* Inset dark shadow */
 }
 
-/* Home page body background */
+/* Home page specific background (with blur effect) */
 .homeBodyBackground {
-    position: fixed;
-    top: 124px;
-    left: 24px;
-    right: 24px;
-    bottom: 104px; /* previously 24px, now allows space for footer */
-    background-color: #ffffff41;
-    padding: 20px;
-    border-radius: 12px;
-    overflow-y: auto;
-    box-sizing: border-box;
-    backdrop-filter: blur(10px);
-}
+    position: fixed; /* Fixed positioning */
+    top: 124px; /* Below the header */
+    left: 24px; /* Margin from left */
+    right: 24px; /* Margin from right */
+    bottom: 104px; /* Space for footer (previously 24px) */
+    background-color: #ffffff41; /* Semi-transparent white */
+    padding: 20px; /* Inner padding */
+    border-radius: 12px; /* Rounded corners */
+    overflow-y: auto; /* Allow vertical scroll */
+/* ========================================
+   Card Containers and Styles
+   Display content in card layout
+   ======================================== */
 
+/* Grid container for cards */
 .cardsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
+    display: flex; /* Flexbox layout */
+    flex-wrap: wrap; /* Cards wrap to next line */
+    gap: 20px; /* Space between cards */
+    justify-content: space-between; /* Distribute cards evenly */
 }
 
+/* General card styling (for home page cards) */
 .card {
-    background-color: #6a0dad6e;
-    width: calc(50%);
-    height: auto;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    margin: 40px auto;
-    backdrop-filter: blur(10px);
-    text-align: center;
-    padding: 20px;
-
+    background-color: #6a0dad6e; /* Semi-transparent purple */
+    width: calc(50%); /* 50% width with gap calculation */
+    height: auto; /* Auto height */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow content */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
+    display: block; /* Block layout */
+    text-decoration: none; /* No underline */
+    color: inherit; /* Inherit text color */
+    margin: 40px auto; /* Vertical and centered margins */
+    backdrop-filter: blur(10px); /* Glassmorphism blur */
+    text-align: center; /* Center text */
+    padding: 20px; /* Inner padding */
 }
 
+/* Event card styling (narrower than general cards) */
 .eventsCard {
-    background-color: #6a0dad6e;
-    width: 25%;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    margin: 40px auto;
-    backdrop-filter: blur(10px);
-    text-align: center;
-    padding: 20px;
-
-}
-
+    background-color: #6a0dad6e; /* Semi-transparent purple */
+    width: 25%; /* 25% width (4 per row) */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow content */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
+    display: block; /* Block layout */
+    text-decoration: none; /* No underline */
+    color: inherit; /* Inherit text color */
+    margin: 40px auto; /* Vertical and centered margins */
+    backdrop-filter: blur(10px); /* Glassmorphism blur */
+    text-align: center; /* Center text */
+/* Home page headline card */
 .homeCard {
-    background-color: #FF6B35;
-    width: calc(33% - 20px);
-    margin: 0 auto;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    text-align: center;
+    background-color: #FF6B35; /* Accent orange */
+    width: calc(33% - 20px); /* ~33% width with gap */
+    margin: 0 auto; /* Centered */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+    display: block; /* Block layout */
+    text-decoration: none; /* No underline */
+    color: inherit; /* Inherit color */
+    text-align: center; /* Center text */
 }
 
+/* Home card hover effect */
 .homeCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px); /* Lift up on hover */
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3); /* Stronger shadow */
 }
 
-/* Contact page card */
+/* Contact page card styling */
 .contactCard {
-    background-color: #FF6B35;
-    width: 40%;
-    margin: 0 auto;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    padding: 20px;
+    background-color: #FF6B35; /* Accent orange */
+    width: 40%; /* 40% width (centered) */
+    margin: 0 auto; /* Centered */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+    display: block; /* Block layout */
+    text-decoration: none; /* No underline */
+    color: inherit; /* Inherit color */
+    padding: 20px; /* Inner padding */
 }
 
+/* Contact card hover effect */
 .contactCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px); /* Lift up on hover */
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3); /* Stronger shadow */
 }
 
+/* General card hover effect */
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
-}
-
+/* Card title bar (event name) */
 .cardTitle {
-    background-color: #6A0DAD; /* primary purple */
-    color: white;
-    padding: 10px;
-    font-size: 18px;
-    text-align: center;
+    background-color: #6A0DAD; /* Primary purple */
+    color: white; /* White text */
+    padding: 10px; /* Inner padding */
+    font-size: 18px; /* Title size */
+    text-align: center; /* Centered text */
 }
 
+/* Image container in card */
 .cardImageWrapper {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0px;
-    background-color: #D6C2E9; /* soft lilac */
-    overflow: hidden;
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    border-radius: 0px; /* No rounded corners */
+    background-color: #D6C2E9; /* Soft lilac background */
+    overflow: hidden; /* Hide overflow image */
 }
 
+/* Card image styling */
 .cardImage {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    display: block;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: contain; /* Maintain aspect ratio */
+    object-position: center; /* Center image */
+    display: block; /* Block display */
 }
 
+/* Card content section (venue info) */
 .cardContent {
-    background-color: #C4A9E0; /* darker lilac for contrast */
-    padding: 15px;
-    color: white;
-    text-align: center;
+    background-color: #C4A9E0; /* Darker lilac for contrast */
+    padding: 15px; /* Inner padding */
+    color: white; /* White text */
+    text-align: center; /* Centered text */
 }
 
+/* Card price section */
 .cardPrice {
-    background-color: #6A0DAD; /* accent orange */
-    padding: 15px;
-    color: white;
-    text-align: center;
-    font-weight: 600;
-}
+    background-color: #6A0DAD; /* Primary purple */
+    padding: 15px; /* Inner padding */
+    color: white; /* White text */
+    text-align: center; /* Centered text */
+    font-weight: 600; /* Bold text */
 
+/* ========================================
+   Index Card Styles
+   Used on homepage for content display
+   ======================================== */
+
+/* Main index card container */
 .indexCard {
-    width: 100%;
-    height: 100px;
-    background-color: #D6C2E9; /* lilac base */
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%; /* Full width */
+    height: 100px; /* Fixed height */
+    background-color: #D6C2E9; /* Lilac base color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    padding: 20px; /* Inner padding */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Vertical layout */
+    justify-content: center; /* Vertically centered */
 }
 
-  
-  .indexCard .card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #fff; /* inner box with white background */
-    border-top-left-radius: 15px; /* rounded top-left corner */
-    border-top-right-radius: 15px; /* rounded top-right corner */
-    border-bottom-left-radius: 15px; /* sharp bottom-left corner */
-    border-bottom-right-radius: 15px; /* sharp bottom-right corner */
-    padding: 15px;
-    width: 100%; /* spans the full width */
-  }
-  
-  .indexCard h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .indexCard p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.5;
-  }
+/* Inner content of index card */
+.indexCard .card-content {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Vertical layout */
+    justify-content: center; /* Vertically centered */
+    align-items: center; /* Horizontally centered */
+    text-align: center; /* Centered text */
+    background-color: #fff; /* White background */
+    border-top-left-radius: 15px; /* Rounded top-left */
+    border-top-right-radius: 15px; /* Rounded top-right */
+    border-bottom-left-radius: 15px; /* Rounded bottom-left */
+    border-bottom-right-radius: 15px; /* Rounded bottom-right */
+    padding: 15px; /* Inner padding */
+    width: 100%; /* Full width */
+}
 
-/* Footer styles */
+/* Index card heading */
+.indexCard h2 {
+    font-size: 24px; /* Large heading */
+    color: #333; /* Dark gray text */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+/* Index card paragraph text */
+.indexCard p {
+    font-size: 16px; /* Regular text size */
+    color: #666; /* Medium gray text */
+    line-height: 1.5; /* Readable line spacing */
+  b========================================
+   Footer Styles
+   Fixed footer at bottom of page
+   ======================================== */
+
+/* Footer wrapper container */
 .footerWrapper {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    border-radius: 0px 0px 0 0;
-    overflow: hidden;
-    box-shadow: 0px 0px 25px 0px #000000;
+    width: 100%; /* Full width */
+    position: fixed; /* Fixed position at bottom */
+    bottom: 0; /* Stick to bottom */
+    left: 0; /* Left edge */
+    z-index: 1000; /* On top of other elements */
+    border-radius: 0px 0px 0 0; /* No rounded corners */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0px 0px 25px 0px #000000; /* Dark shadow */
 }
 
+/* Footer content styling */
 .footer {
-    background-color: #6A0DAD;
-    height: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 0px 15px 7px #000000;
-    color: white;
-    font-size: 16px;
-    text-align: center;
-    padding: 0 20px;
-}
+    background-color: #6A0DAD; /* Primary purple */
+    height: 80px; /* Fixed height */
+    width: 100%; /* Full width */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Horizontally centered */
+    align-items: center; /* Vertically centered */
+    box-shadow: 0px 0px 15px 7px #000000; /* Deep shadow */
+   ========================================
+   Button Styles
+   Multiple button variants with effects
+   ======================================== */
 
-/*Button styles*/
-
-/* Base animated button using purple/orange instead of blue */
+/* Base animated button (purple to orange gradient) */
 .animated-button,
 button {
-    display: inline-block;
-    padding: 12px 28px;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-    background: linear-gradient(135deg, #6A0DAD, #FF6B35);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    margin: 10px;
+    display: inline-block; /* Inline block display */
+    padding: 12px 28px; /* Padding around text */
+    font-size: 16px; /* Text size */
+    font-weight: 600; /* Bold text */
+    border: none; /* No border */
+    border-radius: 15px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    text-decoration: none; /* No underline */
+    color: white; /* White text */
+    background: linear-gradient(135deg, #6A0DAD, #FF6B35); /* Purple to orange gradient */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Smooth transitions */
+    position: relative; /* For pseudo-element positioning */
+    overflow: hidden; /* Hide overflow of pseudo-element */
+    margin: 10px; /* Spacing around button */
 }
 
-/* Glowing gradient effect on hover */
+/* Glowing gradient effect layer (on hover) */
 .animated-button::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(60deg, #FF6B35, #6A0DAD, #FF9B6B, #FF6B35);
-    background-size: 400% 400%;
-    filter: blur(20px);
-    opacity: 0;
-    z-index: 0;
-    border-radius: inherit;
-    transition: opacity 0.3s ease;
-    animation: glowGradient 6s ease infinite;
+    content: ""; /* Create pseudo-element */
+    position: absolute; /* Absolute positioning */
+    top: -50%; /* Above element */
+    left: -50%; /* Left of element */
+    width: 200%; /* Larger than element */
+    height: 200%; /* Larger than element */
+    background: linear-gradient(60deg, #FF6B35, #6A0DAD, #FF9B6B, #FF6B35); /* Multi-color gradient */
+    background-size: 400% 400%; /* Allow animation */
+    filter: blur(20px); /* Blur for glow effect */
+    opacity: 0; /* Start invisible */
+    z-index: 0; /* Behind button text */
+    border-radius: inherit; /* Inherit border radius */
+    transition: opacity 0.3s ease; /* Fade in/out transition */
+    animation: glowGradient 6s ease infinite; /* Continuous animation */
 }
 
-/* Keep button text above glow */
+/* Keep button text on top of glow layer */
 .animated-button span,
 button span {
-    position: relative;
-    z-index: 1;
+    position: relative; /* Relative positioning */
+    z-index: 1; /* Above glow layer */
 }
 
-/* Hover effect */
+/* Animated button hover state */
 .animated-button:hover,
 button:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 10px #FF6B35;
+    transform: translateY(-3px) scale(1.05); /* Lift and enlarge */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 10px #FF6B35; /* Enhanced shadow with orange glow */
 }
 
+/* Show glow effect on hover */
 .animated-button:hover::before {
-    opacity: 0.6;
+    opacity: 0.6; /* Make glow visible */
 }
 
-/* Active / pressed state */
+/* Animated button pressed state */
 .animated-button:active,
 button:active {
-    transform: scale(0.97);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(0.97); /* Slightly shrink */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Reduced shadow */
 }
 
-/* Glass-style button variant */
+/* ========================================
+   Button Variants
+   ======================================== */
+
+/* Glass-morphism button (transparent with blur) */
 .glass-button {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 12px 28px;
-    border-radius: 15px;
-    transition: all 0.2s ease-in-out;
-    display: inline-block;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    color: white;
-    font-size: 16px;
-    margin: 10px;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    padding: 12px 28px; /* Padding around text */
+    border-radius: 15px; /* Rounded corners */
+    transition: all 0.2s ease-in-out; /* Smooth transitions */
+    display: inline-block; /* Inline block display */
+    text-align: center; /* Centered text */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    color: white; /* White text */
+    font-size: 16px; /* Text size */
+    margin: 10px; /* Spacing around button */
+    backdrop-filter: blur(8px); /* Glassmorphism blur */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
+/* Glass button hover state */
 .glass-button:hover {
-    background: rgba(255, 255, 255, 0.35);
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.35); /* More opaque on hover */
+    transform: translateY(-3px) scale(1.05); /* Lift and enlarge */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
 }
 
+/* ========================================
+   Animation Keyframes
+   ======================================== */
 
-/* Glow animation keyframes */
+/* Glow gradient animation */
 @keyframes glowGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% { background-position: 0% 50%; } /* Start position */
+    50% { background-position: 100% 50%; } /* Middle position */
+    100% { background-position: 0% 50%; } /* End position (loop) */
 }
 
-/* Standard button (flat, clean, consistent with site colors) */
+/* Standard button (flat, clean style) */
 .standard-button {
-    display: inline-block;
-    padding: 12px 28px;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-    background-color: #6A0DAD; /* Primary purple */
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    margin: 10px;
+    display: inline-block; /* Inline block display */
+    padding: 12px 28px; /* Padding around text */
+    font-size: 16px; /* Text size */
+    font-weight: 600; /* Bold text */
+    border: none; /* No border */
+    border-radius: 12px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    text-decoration: none; /* No underline */
+    color: white; /* White text */
+    background-color: #6A0DAD; /* Primary purple background */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+    margin: 10px; /* Spacing around button */
 }
 
-/* Hover effect */
+/* Standard button hover state */
 .standard-button:hover {
-    background-color: #FF6B35; /* Switch to orange on hover */
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-}
+    background-color: #FF6B35; /* Change to orange on hover */
+    transform: translateY(-2px); /* Lift up slightly */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25); /* Enhanced shadow */
+}========================================
+   Form Input Styles
+   Text input, email, textarea styling
+   ======================================== */
 
-/* Active / pressed state */
-.standard-button:active {
-    transform: scale(0.97);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Form Inputs */
+/* Text input, email, and textarea styling */
 input[type=text], input[type=email], textarea {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 12px;
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    padding: 12px; /* Inner padding */
+    border-radius: 15px; /* Rounded corners */
+    transition: all 0.2s ease-in-out; /* Smooth transitions */
+    display: inline-block; /* Inline block display */
+    text-align: left; /* Left-aligned text */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    color: white; /* White text */
+    font-size: 16px; /* Text size */
+    margin: 10px; /* Spacing around input */
+    backdrop-filter: blur(8px); /* Glassmorphism blur */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Textarea specific sizing */
+textarea {
+    width: 50%; /* 50% width */
+    height: 75%; /* 75% height */
+}
+
+/* Select/dropdown styling */
+select {
+    background: rgba(255, 255, 255, 0.5); /* More opaque white */
+    padding: 12px; /* Inner padding */
+    border-radius: 15px; /* Rounded corners */
+    transition: all 0.2s ease-in-out; /* Smooth transitions */
+    display: inline-block; /* Inline block display */
+    text-align: left; /* Left-aligned text */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    color: white; /* White text */
+    font-size: 16px; /* Text size */
+    margin: 10px; /* Spacing around select */
+    backdrop-filter: blur(8px); /* Glassmorphism blur */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     transition: all 0.2s ease-in-out;
     display: inline-block;
     text-align: left;
