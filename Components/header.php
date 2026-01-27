@@ -1,3 +1,9 @@
+<?php
+  require_once(__DIR__ . '/../functions.php');
+  
+?>
+
+
 <!--Header Navigation Component (header.php)-->
 <div class="menuWrapper">
     <div class="menu">

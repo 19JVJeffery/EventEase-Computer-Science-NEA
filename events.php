@@ -12,40 +12,22 @@
     <div class="cardsContainer">
       <!-- Iterative PHP-->
       <?php
-        $id = '001';
-        $name = 'Super fun event';
-        $venue = 'Generic venue';
-        $price = 2.49;
-        $stock = 'In stock';
-        include ('event-card.php');
+
+        $events = eventGet();
+        print_r($events); // For debugging purposes
+
+        for($i = 0; $i < count($events); $i++) {
+          $id = $events[$i]['eventID'];
+          $name = $events[$i]['eventName'];
+          $venue = $events[$i]['eventVenue'];
+          $price = 0;
+          $stock = 0;
+
+          include ('event-card.php');
+        }
       ?>
 
-      <?php
-        $id = '001';
-        $name = 'Super fun event';
-        $venue = 'Generic venue';
-        $price = 2.49;
-        $stock = 'In stock';
-        include ('event-card.php');
-      ?>
-
-      <?php
-        $id = '001';
-        $name = 'Super fun event';
-        $venue = 'Generic venue';
-        $price = 2.49;
-        $stock = 'In stock';
-        include ('event-card.php');
-      ?>
-
-      <?php
-        $id = '001';
-        $name = 'Super fun event';
-        $venue = 'Generic venue';
-        $price = 2.49;
-        $stock = 'In stock';
-        include ('event-card.php');
-      ?>
+      
   </div>
   <!--Footer-->
   <div class="footerWrapper">

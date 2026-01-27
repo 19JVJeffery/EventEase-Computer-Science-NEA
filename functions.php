@@ -6,7 +6,7 @@
 
 function queryDB($query){
     //Connect to sqlite file
-    $db = new PDO('sqlite:Tools/EventEase.db');
+    $db = new PDO('sqlite:Tools/EventEase');
 
     //Prepare my query - stops SQL injection attempts
     $query = $db->prepare($query);
@@ -20,4 +20,9 @@ function queryDB($query){
     return $result;
 }
 
-?>
+/**
+ * Get events from the database
+*/
+    function eventGet() {
+        return queryDB("SELECT * FROM tblEvents");
+    }
