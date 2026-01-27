@@ -1,3 +1,5 @@
+<?php
+
 /**
  * Connect to the database
 */
@@ -17,3 +19,5 @@ function queryDB($query){
 
     return $result;
 }
+
+?>
