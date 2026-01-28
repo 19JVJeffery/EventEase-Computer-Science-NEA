@@ -24,5 +24,7 @@ function queryDB($query){
  * Get events from the database
 */
     function eventGet() {
-        return queryDB("SELECT * FROM tblEvents");
+        return queryDB("SELECT * FROM tblEvents
+        INNER JOIN tblVenues ON tblEvents.VenueID = tblVenues.venueID;");
+
     }

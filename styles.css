@@ -228,6 +228,7 @@ li a:active {
     padding: 15px;
     color: white;
     text-align: center;
+    text-decoration: none !important;
 }
 
 .cardPrice {
