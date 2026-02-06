@@ -10,7 +10,7 @@ function eventCard($id, $name, $venue, $price, $stock) {
 $card = 
 '<div class="eventsCard">
     <!-- Clickable link to event detail page -->
-    <a href="Product Pages/'. $id.'.php" class="cardLink">
+    <a href="event-view.php?id='. $id.'" class="cardLink">
         <!-- Event title with rounded top corners -->
         <div class="cardTitle" style="border-radius: 15px 15px 0px 0px;"><?= $name ?></div>
         

@@ -14,7 +14,7 @@
       <?php
         require_once("event-card.php");
         $events = eventGet();
-        print_r($events); // For debugging purposes
+        //print_r($events); // For debugging purposes
 
         for($i = 0; $i < count($events); $i++) {
           $id = $events[$i]['eventID'];

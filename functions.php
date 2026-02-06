@@ -23,8 +23,19 @@ function queryDB($query){
 /**
  * Get events from the database
 */
-    function eventGet() {
-        return queryDB("SELECT * FROM tblEvents
-        INNER JOIN tblVenues ON tblEvents.VenueID = tblVenues.venueID;");
+function eventGet() {
+    return queryDB("SELECT * FROM tblEvents
+    INNER JOIN tblVenues ON tblEvents.VenueID = tblVenues.venueID;");
 
+}
+
+
+/**
+ * Get event details from the database
+ */
+
+    function eventGetDetails($id) {
+        return queryDB("SELECT * FROM tblEvents
+        INNER JOIN tblVenues ON tblEvents.VenueID = tblVenues.venueID
+        WHERE eventID = $id;");
     }
