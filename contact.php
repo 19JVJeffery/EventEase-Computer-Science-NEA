@@ -55,7 +55,6 @@
       </div>
     </div>
   </div>
-  
   <!-- Footer section with copyright information -->
   <div class="footerWrapper">
     <?php include("Components/footer.php") ?>
