@@ -102,8 +102,7 @@ if(count($eventDetails) == 0) {
           </div>
         </div>
       </div>
-
-      <button class="animated-button book-now-btn"><span>Book now</span></button>
+      <a href="book_event.php?id=<?php echo $id; ?>" class="animated-button book-now-btn" style = "text-align: center;"><span>Book now</span></a>
     </div>
   </div>
 
