@@ -39,28 +39,6 @@ $card =
     <div class="cardPrice" style="border-radius: 0px 0px 15px 15px;">
         &pound;'. number_format($price, 2) .'
     </div>
-    
-    <!-- Add to cart form -->
-    <form method="post">
-        <!-- Hidden input for event ID -->
-        <input type="hidden" name="pid" value="'. $id .'">
-        
-        <!-- Quantity selector dropdown (1-5 tickets) -->
-        <select name="qty" required style="display:block; margin:0 auto; margin-top:10px;">
-            <option value="">Qty</option>';
-            
-            //<!-- Generate options from 1 to 5 -->
-            for ($i = 1; $i <= 5; $i++):
-                $card .= '<option value="'. $i .'">'. $i .'</option>';
-            endfor;
-
-        $card .= '</select>
-        
-        <!-- Submit button to add event to shopping cart -->
-        <button class="standard-button" style="display:block; margin:10px auto;">
-            Add to cart
-        </button>
-    </form>
 </div>';
 
             return $card;
