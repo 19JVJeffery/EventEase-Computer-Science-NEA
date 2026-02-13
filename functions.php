@@ -39,3 +39,7 @@ function eventGet() {
         INNER JOIN tblVenues ON tblEvents.VenueID = tblVenues.venueID
         WHERE eventID = $id;");
     }
+
+/**
+ * Make Booking
+*/
