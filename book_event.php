@@ -36,11 +36,12 @@ $event = $eventDetails[0];
             
             <hr style="border: 0.5px solid #E0E0E0; margin: 20px 0;">
 
-            <form action="process_booking.php" method="POST">
+            <form action="" method="POST">
                 <input type="hidden" name="event_id" value="<?php echo $id; ?>">
 
-                <label for="cust_name">Full Name:</label>
-                <input type="text" id="cust_name" name="cust_name" placeholder="Enter your name" required>
+                <label for="custFirstName">First Name:</label>
+                <input type="text" id="custFirstName" name="custFirstName" placeholder="Enter your first name" required>
+                <input type="text" id="custLastName" name="custLastName" placeholder="Enter your last name" required>
                 
                 <br><br>
 
@@ -49,14 +50,15 @@ $event = $eventDetails[0];
 
                 <br><br>
 
-                <div style="display: flex; gap: 20px;">
-                    <div style="flex: 1;">
+                <div>
+                    <div>
                         <label for="tickets">Tickets:</label>
                         <input type="number" id="tickets" name="tickets" min="1" max="10" value="1" required>
                     </div>
-                    <div style="flex: 2;">
-                        <label for="seating">Seating Area:</label>
-                        <select name="seating" id="seating" style="width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #ccc; margin-top: 5px;">
+                    <br><br>
+                    <div>
+                        <label for="seating">Seating Type:</label>
+                        <select name="seating" id="seating" style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; margin-top: 5px;">
                             <option value="General">General Admission</option>
                             <option value="Front Row">Front Row</option>
                             <option value="Balcony">Balcony</option>
@@ -64,9 +66,7 @@ $event = $eventDetails[0];
                         </select>
                     </div>
                 </div>
-
                 <br><br>
-
                 <div style="text-align: center;">
                     <button type="submit" name="submit_booking" class="glass-button">Confirm Booking</button>
                 </div>
