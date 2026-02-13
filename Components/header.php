@@ -26,10 +26,10 @@
         <li><a href="/contact.php">Contact</a></li>
         
         <!-- User login page link -->
-        <li><a href="/login.php">Login</a></li>
+        <li><a href="Auth/login.php">Login</a></li>
         
         <!-- User registration page link -->
-        <li><a href="/signup.php">Sign Up</a></li>
+        <li><a href="Auth/signup.php">Sign Up</a></li>
       </ul>
     </div>
 </div>

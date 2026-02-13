@@ -45,8 +45,13 @@ $event = $eventDetails[0];
                 
                 <br><br>
 
-                <label for="cust_email">Email Address:</label>
-                <input type="email" id="cust_email" name="cust_email" placeholder="Enter your email" required>
+                <label for="custEmail">Email Address:</label>
+                <input type="email" id="custEmail" name="custEmail" placeholder="Enter your email" required>
+
+                <br><br>
+
+                <label for = "custPhone">Phone Number:</label>
+                <input type="tel" id="custPhone" name="custPhone" placeholder="Enter your phone number" required>
 
                 <br><br>
 
