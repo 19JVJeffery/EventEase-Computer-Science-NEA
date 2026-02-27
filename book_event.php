@@ -16,7 +16,7 @@ if(isset($_POST['custFirstName']) && isset($_POST['custLastName']) && isset($_PO
     makeBooking($event_id, $firstName, $lastName, $email, $phone, $tickets, $seating);
 
     //Redirect to a confirmation page or back to the events page
-    header("Location: booking_confirmation.php");
+    //header("Location: booking_confirmation.php");
     exit();
 }
 

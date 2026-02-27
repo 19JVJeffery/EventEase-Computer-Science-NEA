@@ -55,7 +55,8 @@ function makeBooking($event_id, $firstName, $lastName, $email, $phone, $tickets,
     if($seatCheck[0]['booked'] < $seatCheck[0]['capacity']){
         if ($tickets > ($seatCheck[0]['capacity'] - $seatCheck[0]['booked'])){
             echo "Not enough seats available for the number of tickets.";
-            return;
+            header("Location: booking_failed.php?error=not_enough_seats");
+            exit();
         }else{
             queryDB("INSERT INTO tblBookings (showingID, firstName, lastName, email, phone, tickets) VALUES ($event_id, '$firstName', '$lastName', '$email', '$phone', $tickets);");
             $bookingID = queryDB("SELECT bookingID FROM tblBookings ORDER BY bookingID DESC LIMIT 1;")[0]['bookingID'];
@@ -71,5 +72,8 @@ function makeBooking($event_id, $firstName, $lastName, $email, $phone, $tickets,
 
     else{
         echo "No seats available for this event.";
+        header("Location: booking_failed.php?error=no_seats_available");
+
+        
     }
 }
