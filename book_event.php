@@ -1,6 +1,25 @@
 <?php 
 include("functions.php");
 
+//Form submitted?
+if(isset($_POST['custFirstName']) && isset($_POST['custLastName']) && isset($_POST['custEmail']) && isset($_POST['custPhone']) && isset($_POST['tickets']) && isset($_POST['seating'])) {
+    $event_id = $_POST['event_id'];
+    $firstName = $_POST['custFirstName'];
+    $lastName = $_POST['custLastName'];
+    $email = $_POST['custEmail'];
+    $phone = $_POST['custPhone'];
+    $tickets = $_POST['tickets'];
+    $seating = $_POST['seating'];
+
+    //print_r($_POST); // Debugging: Check the form data
+
+    makeBooking($event_id, $firstName, $lastName, $email, $phone, $tickets, $seating);
+
+    //Redirect to a confirmation page or back to the events page
+    header("Location: booking_confirmation.php");
+    exit();
+}
+
 // 1. Validate the ID from the URL
 if(!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     header("Location: events.php");
