@@ -11,7 +11,7 @@ if($bookingJustMade && isset($_SESSION['last_booking'])) {
     unset($_SESSION['last_booking']);
 } else if(isset($_GET['booking_id']) && is_numeric($_GET['booking_id'])) {
     // Optionally retrieve booking from database using booking ID
-    // $booking = getBookingDetails($_GET['booking_id']);
+    $booking = getBookingDetails($_GET['booking_id']);
 }
 ?>
 
